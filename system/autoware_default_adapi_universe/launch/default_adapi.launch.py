@@ -40,7 +40,7 @@ def get_default_config():
     path = PathJoinSubstitution([path, "config/default_adapi.param.yaml"])
     return path
 
-
+# 修正箇所
 def generate_launch_description():
     components = [
         create_api_node("autoware_default_adapi", "interface", "InterfaceNode"),
@@ -50,8 +50,8 @@ def generate_launch_description():
         create_api_node("autoware_default_adapi_universe", "diagnostics", "DiagnosticsNode"),
         create_api_node("autoware_default_adapi_universe", "fail_safe", "FailSafeNode"),
         create_api_node("autoware_default_adapi_universe", "heartbeat", "HeartbeatNode"),
-        create_api_node("autoware_default_adapi_universe", "manual/local", "ManualControlNode"),
-        create_api_node("autoware_default_adapi_universe", "manual/remote", "ManualControlNode"),
+        # create_api_node("autoware_default_adapi_universe", "manual/local", "ManualControlNode"),
+        # create_api_node("autoware_default_adapi_universe", "manual/remote", "ManualControlNode"),
         create_api_node("autoware_default_adapi_universe", "motion", "MotionNode"),
         create_api_node("autoware_default_adapi_universe", "mrm_request", "MrmRequestNode"),
         create_api_node("autoware_default_adapi_universe", "operation_mode", "OperationModeNode"),
@@ -61,7 +61,7 @@ def generate_launch_description():
         create_api_node("autoware_default_adapi_universe", "vehicle_command", "VehicleCommandNode"),
         create_api_node("autoware_default_adapi_universe", "vehicle_metrics", "VehicleMetricsNode"),
         create_api_node("autoware_default_adapi_universe", "vehicle_info", "VehicleInfoNode"),
-        create_api_node("autoware_default_adapi_universe", "vehicle_door", "VehicleDoorNode"),
+        # create_api_node("autoware_default_adapi_universe", "vehicle_door", "VehicleDoorNode"),
     ]
     container = ComposableNodeContainer(
         namespace="adapi",
